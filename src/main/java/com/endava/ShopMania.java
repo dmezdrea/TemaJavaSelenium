@@ -69,13 +69,13 @@ public class ShopMania {
     public void verify(){
         WebElement maxPrice;
         WebElement maxShop;
-        maxPrice = driver.findElement(By.xpath(".//*[@id='product_offers_container']/ul[55]/li[2]/div[2]/div[3]/p[1]/a"));
-        maxShop = driver.findElement(By.xpath(".//*[@id='product_offers_container']/ul[55]/li[2]/div[2]/div[2]/p/a"));
+        maxPrice = driver.findElement(By.xpath("//a[contains(.,'2.105 RON')]"));
+        maxShop = driver.findElement(By.xpath("//img[contains(@alt,'Extreme Digital')]"));
         //maxPrice.getText();
         String price = maxPrice.getText();
-        assertTrue(price.contains("2.108,63 RON"));
-        maxShop.getAttribute("title");
-        System.out.println("Pretul maxim este: " + price + " Magazinul de lux este: " + maxShop.getAttribute("title"));
+        assertTrue(price.contains("2.105 RON"));
+        maxShop.getAttribute("alt");
+        System.out.println("Pretul maxim este: " + price + " Magazinul de lux este: " + maxShop.getAttribute("alt"));
 
 
     }
